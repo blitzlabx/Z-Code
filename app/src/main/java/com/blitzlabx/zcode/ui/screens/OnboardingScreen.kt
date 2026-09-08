@@ -1,5 +1,6 @@
 package com.blitzlabx.zcode.ui.screens
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.pager.HorizontalPager
@@ -27,7 +28,7 @@ import com.blitzlabx.zcode.ui.theme.ZBlue
 import com.blitzlabx.zcode.ui.theme.ZSurface
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun OnboardingScreen(onFinished: () -> Unit) {
     val pagerState = rememberPagerState(pageCount = { 3 })
