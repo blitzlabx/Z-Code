@@ -1,0 +1,2 @@
+-keep class com.blitzlabx.zcode.** { *; }
+-dontwarn com.google.zxing.**
