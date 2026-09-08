@@ -51,7 +51,7 @@ fun SettingsScreen(
         ) {
             Text("Appearance", color = Color(0xFF8AA0C0))
             listOf("Light" to "light", "Dark" to "dark", "System" to "system").forEach { (label, value) ->
-                Row(Modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                     Text(label, color = Color.White)
                     RadioButton(selected = theme == value, onClick = { viewModel.setTheme(value) })
                 }
@@ -74,7 +74,7 @@ fun SettingsScreen(
 
 @Composable
 fun SettingSwitch(label: String, checked: Boolean, onChange: (Boolean) -> Unit) {
-    Row(Modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp), horizontalArrangement = Arrangement.SpaceBetween) {
+    Row(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp), horizontalArrangement = Arrangement.SpaceBetween) {
         Text(label, color = Color.White)
         Switch(checked = checked, onCheckedChange = onChange)
     }

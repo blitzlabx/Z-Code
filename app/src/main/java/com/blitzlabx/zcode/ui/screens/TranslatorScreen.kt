@@ -105,7 +105,7 @@ fun TranslatorScreen(
                 Text(error!!, color = MaterialTheme.colorScheme.error)
             }
             Spacer(Modifier.height(24.dp))
-            Row(Modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 OutlinedButton(
                     onClick = { viewModel.setInputText(""); viewModel.setPassword(""); viewModel.clearResults() },
                     modifier = Modifier.weight(1f)

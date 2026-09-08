@@ -34,12 +34,14 @@ fun HomeScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text("Z", color = ZBlueGlow, fontWeight = FontWeight.Bold, fontSize = 24.sp)
-                        Text("-Code", color = Color.White, fontWeight = FontWeight.SemiBold, fontSize = 20.sp)
+                    Column {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text("Z", color = ZBlueGlow, fontWeight = FontWeight.Bold, fontSize = 24.sp)
+                            Text("-Code", color = Color.White, fontWeight = FontWeight.SemiBold, fontSize = 20.sp)
+                        }
+                        Text("Created by Blitz", color = Color(0xFF6A8AAA), fontSize = 12.sp)
                     }
                 },
-                subtitle = { Text("Created by Blitz", color = Color(0xFF6A8AAA), fontSize = 12.sp) },
                 actions = {
                     IconButton(onClick = onOpenDrawer) {
                         Icon(Icons.Default.Menu, contentDescription = "Menu", tint = ZBlue)
@@ -86,7 +88,7 @@ fun HomeScreen(
         ) {
             Text("Quick Actions", color = Color(0xFF8AA0C0), fontSize = 14.sp)
             Spacer(Modifier.height(12.dp))
-            Row(Modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 QuickActionCard(
                     title = "Generate",
                     icon = Icons.Default.AutoAwesome,
@@ -119,7 +121,7 @@ fun HomeScreen(
                 }
             }
             Spacer(Modifier.height(24.dp))
-            Row(Modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
                 StatItem("Total", stats.first.toString())
                 StatItem("Saved", stats.second.toString())
                 StatItem("History", stats.third.toString())

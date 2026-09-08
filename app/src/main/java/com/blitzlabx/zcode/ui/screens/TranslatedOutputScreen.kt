@@ -73,7 +73,7 @@ fun TranslatedOutputScreen(
                     Text(r.text, color = Color.White, modifier = Modifier.padding(16.dp))
                 }
                 Spacer(Modifier.height(12.dp))
-                Row(Modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
                     Text("Z-Code Length: ${r.zCodeLength}", color = Color(0xFF8AA0C0))
                     Text("Decoded Length: ${r.originalLength}", color = Color(0xFF8AA0C0))
                 }
@@ -89,7 +89,7 @@ fun TranslatedOutputScreen(
                     }
                 }
                 Spacer(Modifier.height(24.dp))
-                Row(Modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     OutlinedButton(onClick = {
                         val cm = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                         cm.setPrimaryClip(ClipData.newPlainText("Decoded", r.text))

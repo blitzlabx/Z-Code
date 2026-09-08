@@ -81,7 +81,7 @@ fun GeneratedOutputScreen(
                     )
                 }
                 Spacer(Modifier.height(12.dp))
-                Row(Modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
                     Text("Original: ${r.originalLength}", color = Color(0xFF8AA0C0))
                     Text("Z-Code: ${r.zCodeLength}", color = Color(0xFF8AA0C0))
                 }
@@ -96,7 +96,7 @@ fun GeneratedOutputScreen(
                     }
                 }
                 Spacer(Modifier.height(24.dp))
-                Row(Modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     OutlinedButton(onClick = {
                         val cm = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                         cm.setPrimaryClip(ClipData.newPlainText("Z-Code", r.zCode))

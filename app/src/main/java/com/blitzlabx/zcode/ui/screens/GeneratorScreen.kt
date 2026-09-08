@@ -115,7 +115,7 @@ fun GeneratorScreen(
             }
 
             Spacer(Modifier.height(24.dp))
-            Row(Modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 OutlinedButton(
                     onClick = {
                         viewModel.setInputText("")
