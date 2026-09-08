@@ -1,5 +1,7 @@
 # Z-Code
 
+[![Android CI](https://github.com/blitzlabx/Z-Code/actions/workflows/android.yml/badge.svg)](https://github.com/blitzlabx/Z-Code/actions/workflows/android.yml)
+
 **Offline • Private • Compact**
 
 **Created by Blitz**  
